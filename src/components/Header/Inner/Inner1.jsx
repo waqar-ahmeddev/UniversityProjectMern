@@ -2,8 +2,15 @@ import React from 'react'
 import Smallcomp from './Smallcomp'
 import Smallcomp2 from './Smallcomp2'
 import Smallcomp3 from './Smallcomp3'
+import { useNavigate } from 'react-router-dom'
 
 const Inner1 = ({title}) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    // Shop Now button click handler
+    navigate('/first');
+    // Yahan aap apne shop page ya categories page par navigate kar sakte hain
+  }
   return (
     <div className="bg-[#EEF7EA] w-full h-[360px] rounded-b-3xl px-16 py-10 mt-1">
   <div className="flex items-center justify-between gap-10">
@@ -25,7 +32,7 @@ const Inner1 = ({title}) => {
       </p>
 
       <div className="flex gap-8 mt-6">
-       <button className="bg-[#156019] text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-[#114d14] transition duration-300 cursor-pointer">
+      <button onClick={handleClick} className="bg-[#156019] text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-[#114d14] transition duration-300 cursor-pointer">
   Shop Now
   {/* Right Arrow SVG */}
   <svg 
