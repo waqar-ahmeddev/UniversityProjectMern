@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const linkClass = ({ isActive }) =>
+    `px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out ${
+      isActive
+        ? "bg-green-100 text-green-700"
+        : "text-gray-700 hover:bg-green-100 hover:text-green-700"
+    }`;
+
   return (
     <div className="bg-white flex items-center justify-between px-8 py-4 shadow-md sticky top-0 z-50">
       
@@ -31,16 +38,33 @@ const Header = () => {
         </h1>
       </div>
 
-      <div className="flex items-center gap-8 text-gray-700 font-medium">
-         <Link className="px-4 py-2 rounded-full text-gray-700 font-medium transition-all duration-300 ease-in-out hover:bg-green-100 hover:text-green-700" to="/">Home</Link>
-      <Link className="px-4 py-2 rounded-full text-gray-700 font-medium transition-all duration-300 ease-in-out hover:bg-green-100 hover:text-green-700" to="/categories">Categories</Link>
-       <Link className="px-4 py-2 rounded-full text-gray-700 font-medium transition-all duration-300 ease-in-out hover:bg-green-100 hover:text-green-700" to="/about">About</Link>
-      <Link className="px-4 py-2 rounded-full text-gray-700 font-medium transition-all duration-300 ease-in-out hover:bg-green-100 hover:text-green-700" to="/contact">Contact</Link>
-</div>
+      {/* Menu */}
+      <div className="flex items-center gap-8">
+
+        <NavLink
+      to="/"
+    className="px-4 py-2 rounded-full text-gray-700 font-medium transition-all duration-300 ease-in-out hover:bg-green-100 hover:text-green-700"
+    >
+     Home
+       </NavLink>
+
+        <NavLink to="/categories" className={linkClass}>
+          Categories
+        </NavLink>
+
+        <NavLink to="/about" className={linkClass}>
+          About
+        </NavLink>
+
+        <NavLink to="/contact" className={linkClass}>
+          Contact
+        </NavLink>
+
+      </div>
 
       {/* Right Side */}
       <div className="flex items-center gap-5">
-        
+
         {/* Search */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -73,13 +97,14 @@ const Header = () => {
         >
           <circle cx="8" cy="21" r="1" />
           <circle cx="19" cy="21" r="1" />
-          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 2h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
         </svg>
 
         <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition cursor-pointer">
           Login / Signup
         </button>
       </div>
+
     </div>
   );
 };

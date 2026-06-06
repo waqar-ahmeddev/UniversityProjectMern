@@ -5,7 +5,7 @@ import Home from './components/Header/Home';
 import Categories from './components/Header/Categories';
 import About from './components/Header/About';
 import Contact from './components/Header/Contact';
-import First from './components/Dashboard/First';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/categories" element={<><Header /><Categories /></>} />
         <Route path="/about" element={<><Header /><About /></>} />
         <Route path="/contact" element={<><Header /><Contact /></>} />
-        <Route path="/first" element={<><First /></>} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   )
