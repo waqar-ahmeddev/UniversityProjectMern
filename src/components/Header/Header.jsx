@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 const Header = () => {
   const linkClass = ({ isActive }) =>
     `px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out ${
@@ -58,6 +57,10 @@ const Header = () => {
 
         <NavLink to="/contact" className={linkClass}>
           Contact
+        </NavLink>
+
+          <NavLink to="/prduct" className={linkClass}>
+          Product
         </NavLink>
 
       </div>
