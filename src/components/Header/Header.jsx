@@ -59,7 +59,7 @@ const Header = () => {
           Contact
         </NavLink>
 
-          <NavLink to="/prduct" className={linkClass}>
+          <NavLink to="/product" className={linkClass}>
           Product
         </NavLink>
 

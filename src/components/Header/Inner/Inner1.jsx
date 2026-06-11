@@ -8,7 +8,7 @@ const Inner1 = ({title}) => {
   const navigate = useNavigate();
   const handleClick = () => {
     // Shop Now button click handler
-    navigate('/prduct');
+    navigate('/product');
     // Yahan aap apne shop page ya categories page par navigate kar sakte hain
   }
   return (
