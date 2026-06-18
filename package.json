@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://waqar-ahmeddev.github.io/UniversityProjectMern",
+  "homepage": "https://waqar-ahmeddev.github.io/UniversityProjectMern/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
