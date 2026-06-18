@@ -107,8 +107,6 @@ const Inner1 = ({title}) => {
       </div>
     </div>
 
-    {/* Right Side */}
-    {/* Right Side */}
 <div className="w-1/2 flex justify-end items-start -mt-20">
   <img
     // 1. Ek high-quality transparent PNG image ka use kiya hai jo background me mix ho jayegi
