@@ -2,10 +2,10 @@ import React from "react";
 
 const Settings = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">⚙ Settings</h1>
+    <div className="p-3 md:p-6">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">⚙ Settings</h1>
 
-      <div className="bg-white p-6 rounded-xl shadow">
+      <div className="bg-white p-4 md:p-6 rounded-xl shadow">
         <label className="block mb-2 font-semibold">
           Store Name
         </label>

@@ -18,11 +18,11 @@ const CardSwap = () => {
       />
 
       {/* MODAL */}
-      <div className="relative z-10 max-w-2xl mx-auto mt-16 bg-white rounded-2xl p-6">
+      <div className=\"relative z-10 w-11/12 sm:max-w-2xl mx-auto mt-8 md:mt-16 bg-white rounded-2xl p-4 md:p-6\">
 
         {/* HEADER */}
-        <div className="flex justify-between mb-4">
-          <h2 className="text-xl font-bold">Your Cart</h2>
+        <div className=\"flex justify-between mb-4\">
+          <h2 className=\"text-lg md:text-xl font-bold\">Your Cart</h2>
 
           <button
             onClick={() => navigate(-1)}

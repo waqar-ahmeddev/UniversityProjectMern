@@ -16,11 +16,11 @@ const Dashboard = () => {
     <div>
       <Sidebar />
 
-      <div className="ml-64">
+      <div className="ml-0 md:ml-64 transition-all duration-300">
         <Header />
 
         {/* Content Area */}
-        <div className="mt-20 p-6 min-h-screen bg-gray-100">
+        <div className="mt-16 md:mt-20 p-3 md:p-6 min-h-screen bg-gray-100">
           <Routes>
             <Route index element={<Home />} />
             <Route path="products" element={<Product />} />

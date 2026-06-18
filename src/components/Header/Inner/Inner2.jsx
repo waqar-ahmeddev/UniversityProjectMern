@@ -9,15 +9,15 @@ import Card6 from "./Card6";
 const Inner2 = () => {
   return (
     // Main container ko flex-col kiya taaki heading upar rahe aur cards niche aayein
-    <div className='flex flex-col items-center justify-center w-full py-10 bg-white'>
+    <div className='flex flex-col items-center justify-center w-full py-6 md:py-10 bg-white'>
       
       {/* Heading: text-center aur font designs ke sath */}
-      <h1 className='text-3xl font-extrabold text-gray-900 mb-8 tracking-wide text-center'>
+      <h1 className='text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-8 tracking-wide text-center px-4'>
         Shop by Categories
       </h1>
       
       {/* Cards Container: Yeh saare cards ko ek pyari line mein space ke sath alignment dega */}
-      <div className='flex flex-row flex-wrap justify-center gap-5 w-full px-6'>
+      <div className='flex flex-row flex-wrap justify-center gap-3 md:gap-5 w-full px-4 md:px-6'>
         <Card/>
         <Card2/>
         <Card3/>

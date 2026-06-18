@@ -83,11 +83,12 @@
 //   );
 // };
 // export default Sidebar;
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const printClick = () => {
     navigate("/");
@@ -100,7 +101,19 @@ const Sidebar = () => {
     }`;
 
   return (
-    <div className="fixed top-0 left-0 w-64 h-screen bg-[#14532D] text-white p-5 z-50">
+    <>
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed md:hidden top-4 left-4 z-50 bg-green-700 text-white p-2 rounded-lg"
+      >
+        {isOpen ? "✕" : "☰"}
+      </button>
+
+      {/* Sidebar */}
+      <div className={`fixed top-0 left-0 w-64 h-screen bg-[#14532D] text-white p-5 z-40 transform transition-transform duration-300 ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      } md:translate-x-0 md:z-50`}>
 
       {/* Logo */}
       <div className="mb-10">
@@ -111,26 +124,51 @@ const Sidebar = () => {
       {/* Menu */}
       <div className="flex flex-col gap-4">
 
-        <NavLink to="/dashboard" end className={linkClass}>
-       🏠 Home
+        <NavLink 
+          to="/dashboard" 
+          end 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
+          🏠 Home
         </NavLink>
-        <NavLink to="/dashboard/products" className={linkClass}>
+        <NavLink 
+          to="/dashboard/products" 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
           🛒 Products
         </NavLink>
 
-        <NavLink to="/dashboard/orders" className={linkClass}>
+        <NavLink 
+          to="/dashboard/orders" 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
           📦 Orders
         </NavLink>
 
-        <NavLink to="/dashboard/cart" className={linkClass}>
+        <NavLink 
+          to="/dashboard/cart" 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
           🛍 Cart
         </NavLink>
 
-        <NavLink to="/dashboard/customers" className={linkClass}>
+        <NavLink 
+          to="/dashboard/customers" 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
           👥 Customers
         </NavLink>
 
-        <NavLink to="/dashboard/settings" className={linkClass}>
+        <NavLink 
+          to="/dashboard/settings" 
+          className={linkClass}
+          onClick={() => setIsOpen(false)}
+        >
           ⚙ Settings
         </NavLink>
 
@@ -139,7 +177,10 @@ const Sidebar = () => {
       {/* Bottom */}
       <div className="absolute bottom-5 pl-5">
         <button
-          onClick={printClick}
+          onClick={() => {
+            setIsOpen(false);
+            printClick();
+          }}
           className="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 cursor-pointer active:scale-95 transition"
         >
           Back
@@ -147,6 +188,7 @@ const Sidebar = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

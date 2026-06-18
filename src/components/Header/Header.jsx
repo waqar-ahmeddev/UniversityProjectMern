@@ -1,15 +1,18 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from \"react\";
+import { NavLink } from \"react-router-dom\";
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const linkClass = ({ isActive }) =>
     `px-4 py-2 rounded-full font-medium transition-all duration-300 ease-in-out ${
       isActive
-        ? "bg-green-100 text-green-700"
-        : "text-gray-700 hover:bg-green-100 hover:text-green-700"
+        ? \"bg-green-100 text-green-700\"
+        : \"text-gray-700 hover:bg-green-100 hover:text-green-700\"
     }`;
 
   return (
-    <div className="bg-white flex items-center justify-between px-8 py-4 shadow-md sticky top-0 z-50">
+    <>
+    <div className=\"bg-white flex items-center justify-between px-4 md:px-8 py-3 md:py-4 shadow-md sticky top-0 z-50\">
       
       {/* Logo */}
       <div className="flex items-center gap-2">
@@ -32,13 +35,21 @@ const Header = () => {
           <circle cx="9" cy="20" r="2" />
         </svg>
 
-        <h1 className="text-2xl font-bold text-green-600">
+        <h1 className=\"text-xl md:text-2xl font-bold text-green-600\">
           Fresh Mart
         </h1>
       </div>
 
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className=\"md:hidden p-2 rounded-lg hover:bg-green-100 transition\"
+      >
+        {mobileMenuOpen ? \"✕\" : \"☰\"}
+      </button>
+
       {/* Menu */}
-      <div className="flex items-center gap-8">
+      <div className=\"hidden md:flex items-center gap-4 lg:gap-8\">
 
         <NavLink
       to="/"
@@ -109,7 +120,49 @@ const Header = () => {
       </div>
 
     </div>
-  );
+    {/* Mobile Menu Dropdown */}
+    {mobileMenuOpen && (
+      <div className=\"md:hidden bg-white border-t shadow-lg\">
+        <div className=\"flex flex-col gap-2 p-4\">
+          <NavLink
+            to=\"/\"
+            className={linkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            🏠 Home
+          </NavLink>
+          <NavLink
+            to=\"/categories\"
+            className={linkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            📁 Categories
+          </NavLink>
+          <NavLink
+            to=\"/about\"
+            className={linkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            ℹ️ About
+          </NavLink>
+          <NavLink
+            to=\"/contact\"
+            className={linkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            📞 Contact
+          </NavLink>
+          <NavLink
+            to=\"/product\"
+            className={linkClass}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            🛒 Product
+          </NavLink>
+        </div>
+      </div>
+    )}
+    </>  );
 };
 
 export default Header;

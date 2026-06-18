@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='fixed top-0 left-64 right-0 bg-white h-20 shadow-sm flex items-center justify-between px-8 z-50'>
+    <div className='fixed top-0 left-0 md:left-64 right-0 bg-white h-16 md:h-20 shadow-sm flex items-center justify-between px-4 md:px-8 z-50 transition-all duration-300'>
 
       {/* Left Side */}
       <div className="flex items-center gap-2">
@@ -31,20 +31,20 @@ const Header = () => {
       </div>
 
       {/* Right Side */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-2 md:gap-5">
 
         <input
           type="text"
           placeholder="Search products..."
-          className="border border-gray-300 px-4 py-2 rounded-lg outline-none"
+          className="hidden md:block border border-gray-300 px-4 py-2 rounded-lg outline-none"
         />
 
-        <button className="text-xl cursor-pointer">🔔</button>
+        <button className="text-lg md:text-xl cursor-pointer">🔔</button>
 
         <img
           src="https://i.pravatar.cc/40"
           alt="profile"
-          className="w-10 h-10 rounded-full"
+          className="w-8 h-8 md:w-10 md:h-10 rounded-full"
         />
 
       </div>

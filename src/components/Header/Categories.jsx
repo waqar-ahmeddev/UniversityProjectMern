@@ -35,14 +35,14 @@ const Categories = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-10">
+    <section className="bg-white py-8 md:py-16 px-4 md:px-10\">
       {/* Heading */}
       <div className="text-center">
         <h3 className="text-green-600 font-semibold text-lg">
           Shop By Category
         </h3>
 
-        <h1 className="text-4xl font-bold mt-2 text-gray-800">
+        <h1 className=\"text-2xl md:text-3xl lg:text-4xl font-bold mt-2 text-gray-800\">
           Browse Our Categories
         </h1>
 
@@ -52,11 +52,11 @@ const Categories = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12\">
         {categories.map((item, index) => (
           <div
             key={index}
-            className="bg-[#F7FAF5] p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 cursor-pointer"
+            className=\"bg-[#F7FAF5] p-4 md:p-6 lg:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 cursor-pointer\"
           >
             <div className="text-5xl">{item.icon}</div>
 

@@ -41,21 +41,21 @@ const products = [
 
 const Home = () => {
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="p-3 md:p-6 bg-gray-100 min-h-screen">
 
       {/* Top Section */}
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
 
         {/* Banner */}
-        <div className="col-span-3 bg-[#EAF7E8] rounded-2xl p-8 flex items-center justify-between">
+        <div className="col-span-1 md:col-span-3 bg-[#EAF7E8] rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center justify-between">
           <div>
-            <h1 className="text-4xl font-bold text-green-800">
+            <h1 className="text-2xl md:text-4xl font-bold text-green-800">
               Big Savings on
               <br />
               Fresh Groceries
             </h1>
 
-            <p className="text-2xl font-semibold mt-4">
+            <p className="text-lg md:text-2xl font-semibold mt-4">
               Up to 30% OFF
             </p>
 
@@ -67,7 +67,7 @@ const Home = () => {
           <img
             src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-supermarket-shopping-basket-png-image_17283317.png"
             alt=""
-            className="h-48 object-contain"
+            className="h-32 md:h-48 object-contain mt-4 md:mt-0"
           />
         </div>
 
@@ -111,7 +111,7 @@ const Home = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="grid grid-cols-6 gap-5 mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 mt-5">
         {products.map((item) => (
           <div
             key={item.id}

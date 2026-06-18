@@ -12,27 +12,27 @@ const Inner1 = ({title}) => {
     // Yahan aap apne shop page ya categories page par navigate kar sakte hain
   }
   return (
-    <div className="bg-[#EEF7EA] w-full h-[360px] rounded-b-3xl px-16 py-10 mt-1">
-  <div className="flex items-center justify-between gap-10">
+    <div className="bg-[#EEF7EA] w-full h-auto md:h-[360px] rounded-b-3xl px-4 md:px-10 lg:px-16 py-6 md:py-10 mt-1">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
 
     {/* Left Side */}
-    <div className="w-1/2 -mt-8">
+    <div className="w-full md:w-1/2 md:-mt-8">
       <button className="inline-block bg-[#E5F4E3] text-[#2E7D32] px-5 py-2 rounded-full font-bold text-sm tracking-wide shadow-sm cursor-pointer hover:bg-amber-400">
         100% Fresh Organic
       </button>
 
-      <h1 className="text-4xl font-bold text-green-900 mt-4 leading-tight">
+      <h1 className="text-2xl md:text-4xl font-bold text-green-900 mt-4 leading-tight">
         Fresh Groceries <br />
         Delivered to Your Doorstep
       </h1>
 
-      <p className="text-gray-600 mt-2 text-lg">
+      <p className="text-gray-600 mt-2 text-sm md:text-lg">
         Get the freshest produce and essentials delivered to your
         doorstep with just a few clicks.
       </p>
 
-      <div className="flex gap-8 mt-6">
-      <button onClick={handleClick} className="bg-[#156019] text-white font-semibold px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-[#114d14] transition duration-300 cursor-pointer">
+      <div className="flex flex-col sm:flex-row gap-4 md:gap-8 mt-6">
+      <button onClick={handleClick} className="w-full sm:w-auto bg-[#156019] text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#114d14] transition duration-300 cursor-pointer">
   Shop Now
   {/* Right Arrow SVG */}
   <svg 
@@ -51,12 +51,12 @@ const Inner1 = ({title}) => {
   </svg>
 </button>
 
-        <button className="bg-white text-green-600 border border-green-500 px-6 py-3 rounded-xl hover:bg-green-100 transition cursor-pointer">
+        <button className="w-full sm:w-auto bg-white text-green-600 border border-green-500 px-6 py-3 rounded-xl hover:bg-green-100 transition cursor-pointer">
           View Categories
         </button>
       </div>
 
-      <div className="flex gap-8 mt-4">
+      <div className="flex flex-col sm:flex-row gap-4 md:gap-8 mt-4 w-full">
         <Smallcomp title="Fast Delivery" subtitle="in 30 Minutes" />
         <Smallcomp2 
       title="Best Quality" 
@@ -107,13 +107,13 @@ const Inner1 = ({title}) => {
       </div>
     </div>
 
-<div className="w-1/2 flex justify-end items-start -mt-20">
+<div className="w-full md:w-1/2 flex justify-center md:justify-end items-start md:-mt-20">
   <img
     // 1. Ek high-quality transparent PNG image ka use kiya hai jo background me mix ho jayegi
     src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-supermarket-shopping-basket-png-image_17283317.png"
     alt="Fresh Groceries Basket"
     // 2. max-w-md ko badal kar max-w-lg ya w-full kiya taaki image bari dikhe
-    className="w-full max-w-lg h-[350px] object-contain mix-blend-multiply drop-shadow-xl "
+    className="w-32 md:w-full md:max-w-lg h-32 md:h-[350px] object-contain mix-blend-multiply drop-shadow-xl "
   />
 </div>
 

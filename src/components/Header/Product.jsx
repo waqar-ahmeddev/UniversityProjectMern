@@ -133,14 +133,14 @@ const Product = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10">
 
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
             Fresh Grocery Store
           </h1>
 
-          <p className="text-slate-500 mt-3">
+          <p className="text-sm md:text-base text-slate-500 mt-3">
             Fresh • Organic • Healthy
           </p>
         </div>
@@ -159,7 +159,7 @@ const Product = () => {
       </div>
 
       {/* CART SUMMARY */}
-      <div className="fixed bottom-6 right-6 bg-white shadow-2xl rounded-3xl px-6 py-5 border min-w-[220px]">
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-white shadow-2xl rounded-3xl px-4 md:px-6 py-4 md:py-5 border min-w-[200px] md:min-w-[220px]">
         <p className="text-sm text-slate-500">Cart Summary</p>
 
         <h3 className="font-bold text-lg">🛒 {totalItems} Items</h3>

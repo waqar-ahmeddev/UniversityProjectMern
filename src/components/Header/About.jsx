@@ -2,14 +2,14 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-[#F8FCF6] py-16 px-10">
+    <section className="bg-[#F8FCF6] py-8 md:py-16 px-4 md:px-10">
       {/* Heading */}
       <div className="text-center">
         <h3 className="text-green-600 font-semibold text-lg">
           About Fresh Mart
         </h3>
 
-        <h1 className="text-4xl font-bold text-gray-800 mt-2">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mt-2">
           Bringing Freshness To Your Doorstep
         </h1>
 
@@ -21,7 +21,7 @@ const About = () => {
       </div>
 
       {/* Content */}
-      <div className="grid md:grid-cols-2 gap-12 items-center mt-16">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center mt-8 md:mt-16">
         
         {/* Left */}
         <div>
@@ -34,7 +34,7 @@ const About = () => {
 
         {/* Right */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-800">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             Why Choose Fresh Mart?
           </h2>
 
@@ -44,7 +44,7 @@ const About = () => {
             healthy, and affordable.
           </p>
 
-          <div className="grid grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
             <div className="bg-white p-5 rounded-2xl shadow-md">
               <h3 className="text-2xl font-bold text-green-600">
                 5000+
