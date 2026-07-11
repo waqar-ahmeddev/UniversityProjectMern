@@ -50,7 +50,7 @@ const CardSwap = () => {
           <h2 className="text-lg md:text-xl font-bold">Your Cart</h2>
           <button
             onClick={() => navigate(-1)}
-            className="px-4 py-2 bg-gray-200 rounded"
+            className="px-4 py-2 bg-gray-200 rounded cursor-pointer"
           >
             Back
           </button>
@@ -79,10 +79,14 @@ const CardSwap = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <button onClick={() => changeQty(product._id, -1)}>-</button>
+                  <div className="flex items-center gap-2 ">
+                    <button onClick={() => changeQty(product._id, -1)} className="cursor-pointer">
+                      -
+                    </button>
                     <span>{qty}</span>
-                    <button onClick={() => changeQty(product._id, 1)}>+</button>
+                    <button onClick={() => changeQty(product._id, 1)} className="cursor-pointer">
+                      +
+                    </button>
                   </div>
                 </div>
               )

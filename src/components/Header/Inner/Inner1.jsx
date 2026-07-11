@@ -6,119 +6,83 @@ import { useNavigate } from 'react-router-dom'
 
 const Inner1 = ({title}) => {
   const navigate = useNavigate();
+
   const handleClick = () => {
-    // Shop Now button click handler
     navigate('/product');
-    // Yahan aap apne shop page ya categories page par navigate kar sakte hain
+  }
+  const handleClickk = () => {
+    navigate('/Categories');
   }
   return (
-    <div className="bg-[#EEF7EA] w-full h-auto md:h-[360px] rounded-b-3xl px-4 md:px-10 lg:px-16 py-6 md:py-10 mt-1">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+    <div style={{ backgroundColor: '#EEF7EA', width: '100%', borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', padding: '30px 20px', marginTop: '4px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
 
-    {/* Left Side */}
-    <div className="w-full md:w-1/2 md:-mt-8">
-      <button className="inline-block bg-[#E5F4E3] text-[#2E7D32] px-5 py-2 rounded-full font-bold text-sm tracking-wide shadow-sm cursor-pointer hover:bg-amber-400">
-        100% Fresh Organic
-      </button>
+        {/* Left Side */}
+        <div style={{ flex: 1, minWidth: '280px' }}>
+          <button style={{ backgroundColor: '#E5F4E3', color: '#2E7D32', padding: '6px 16px', borderRadius: '999px', fontWeight: 'bold', fontSize: '13px', border: 'none', cursor: 'pointer' }}>
+            100% Fresh Organic
+          </button>
 
-      <h1 className="text-2xl md:text-4xl font-bold text-green-900 mt-4 leading-tight">
-        Fresh Groceries <br />
-        Delivered to Your Doorstep
-      </h1>
+          <h1 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1a3d1c', marginTop: '14px', lineHeight: '1.3' }}>
+            Fresh Groceries <br />
+            Delivered to Your Doorstep
+          </h1>
 
-      <p className="text-gray-600 mt-2 text-sm md:text-lg">
-        Get the freshest produce and essentials delivered to your
-        doorstep with just a few clicks.
-      </p>
+          <p style={{ color: '#555', marginTop: '8px', fontSize: '14px' }}>
+            Get the freshest produce and essentials delivered to your doorstep with just a few clicks.
+          </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 md:gap-8 mt-6">
-      <button onClick={handleClick} className="w-full sm:w-auto bg-[#156019] text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#114d14] transition duration-300 cursor-pointer">
-  Shop Now
-  {/* Right Arrow SVG */}
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="18" 
-    height="18" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2.5" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-  >
-    <path d="M5 12h14" />
-    <path d="m12 5 7 7-7 7" />
-  </svg>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '20px' }}>
+            <button onClick={handleClick} style={{ backgroundColor: '#156019', color: 'white', padding: '10px 20px', borderRadius: '10px', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '600', fontSize: '14px' }}>
+              Shop Now
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+
+           <button onClick={handleClickk} style={{ backgroundColor: 'white', color: '#2e7d32', border: '1px solid #4caf50', padding: '10px 20px', borderRadius: '10px', cursor: 'pointer', fontSize: '14px' }}>
+  View Categories
 </button>
+          </div>
 
-        <button className="w-full sm:w-auto bg-white text-green-600 border border-green-500 px-6 py-3 rounded-xl hover:bg-green-100 transition cursor-pointer">
-          View Categories
-        </button>
-      </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '16px' }}>
+            <Smallcomp title="Fast Delivery" subtitle="in 30 Minutes" />
+            <Smallcomp2
+              title="Best Quality"
+              subtitle="100% Fresh"
+              icon={
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.74z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              }
+            />
+            <Smallcomp3
+              title="Affortable Prices"
+              subtitle="Best Deals For you"
+              icon={
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 18H2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2z" />
+                  <path d="M7 7V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
+                  <path d="M11 11h2l1 2.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+              }
+            />
+          </div>
+        </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 md:gap-8 mt-4 w-full">
-        <Smallcomp title="Fast Delivery" subtitle="in 30 Minutes" />
-        <Smallcomp2 
-      title="Best Quality" 
-      subtitle="100% Fresh"
-  icon={
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="32" 
-      height="32" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      className="lucide lucide-badge-check"
-    >
-      <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.74z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
-  } 
-/>
-    <Smallcomp3
-      title="Affortable Prices" 
-      subtitle="Best Deals For you"
-  icon={
-    <svg 
-  xmlns="http://www.w3.org/2000/svg" 
-  width="32" 
-  height="32" 
-  viewBox="0 0 24 24" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  strokeLinecap="round" 
-  strokeLinejoin="round" 
-  className="lucide lucide-baggage-claim"
->
-  {/* Bag ka main structure */}
-  <path d="M22 18H2a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2z" />
-  {/* Bag ka handle */}
-  <path d="M7 7V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
-  {/* Beech ka unique design tag */}
-  <path d="M11 11h2l1 2.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z" />
-</svg>
-  } 
-/>
+        {/* Right Side Image */}
+        <div style={{ flex: 1, minWidth: '200px', display: 'flex', justifyContent: 'center' }}>
+          <img
+            src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-supermarket-shopping-basket-png-image_17283317.png"
+            alt="Fresh Groceries Basket"
+            style={{ width: '100%', maxWidth: '380px', height: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }}
+          />
+        </div>
+
       </div>
     </div>
-
-<div className="w-full md:w-1/2 flex justify-center md:justify-end items-start md:-mt-20">
-  <img
-    // 1. Ek high-quality transparent PNG image ka use kiya hai jo background me mix ho jayegi
-    src="https://png.pngtree.com/png-clipart/20241121/original/pngtree-supermarket-shopping-basket-png-image_17283317.png"
-    alt="Fresh Groceries Basket"
-    // 2. max-w-md ko badal kar max-w-lg ya w-full kiya taaki image bari dikhe
-    className="w-32 md:w-full md:max-w-lg h-32 md:h-[350px] object-contain mix-blend-multiply drop-shadow-xl "
-  />
-</div>
-
-  </div>
-</div>
   )
 }
 
